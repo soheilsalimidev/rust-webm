@@ -11,9 +11,7 @@ fn main() {
     let mut c = cc::Build::new();
     c.cpp(true);
     c.warnings(false);
-    c.flag("-fno-rtti");
-    c.flag("-std=gnu++11");
-    c.flag("-fno-exceptions");
+    c.flag("/MT");
     c.include("libwebm");
     for &f in files.iter() {
         c.file(f);
